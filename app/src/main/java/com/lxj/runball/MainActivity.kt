@@ -1,11 +1,12 @@
 package com.lxj.runball
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-
+    var rlText:RunningLayout? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,5 +27,17 @@ class MainActivity : AppCompatActivity() {
         val text3 = findViewById<LotteryView>(R.id.rxText3)
         text3.setNumberList(100)
         text3.stopScroll(99,100)
+
+        rlText = findViewById<RunningLayout>(R.id.rlText)
+        rlText!!.setNumberRange(100)
+    }
+
+    public fun moveStep(view: View){
+        rlText!!.startPoint()
+
+    }
+
+    public fun stopStep(view: View){
+        rlText!!.stopPoint(99,2000)
     }
 }

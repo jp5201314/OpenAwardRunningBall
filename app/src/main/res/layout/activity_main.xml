@@ -31,4 +31,26 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_running_ball_bg"
     />
+    <com.lxj.runball.RunningLayout
+            android:id="@+id/rlText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    </com.lxj.runball.RunningLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="start"
+                android:onClick="moveStep"
+        />
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+                android:text="stop"
+                android:onClick="stopStep"
+        />
+    </RelativeLayout>
 </LinearLayout>
